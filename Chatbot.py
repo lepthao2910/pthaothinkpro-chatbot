@@ -1,6 +1,7 @@
 import streamlit as st
 from langchain_openai import ChatOpenAI
-from langchain import PromptTemplate, LLMChain
+from langchain import PromptTemplate
+from langchain import LLMChain
 from langchain.memory import ConversationSummaryMemory
 from langchain_core.output_parsers import StrOutputParser
 from langchain.agents import initialize_agent, Tool, AgentType
@@ -305,5 +306,6 @@ if user_input := st.chat_input("Nhập câu hỏi của bạn về ThinkPro...")
             st.info(search_results)
         else:
             st.info("Sử dụng thông tin cửa hàng có sẵn")
+
 
 st.divider()
