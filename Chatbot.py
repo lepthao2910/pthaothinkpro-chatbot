@@ -1,6 +1,12 @@
 import streamlit as st
 from langchain_openai import ChatOpenAI
-from langchain.prompts import PromptTemplate
+# Cho chạy được cả trên langchain mới (có .prompts)
+# và langchain cũ (import trực tiếp từ langchain)
+try:
+    from langchain.prompts import PromptTemplate
+except ImportError:
+    from langchain import PromptTemplate
+
 from langchain.chains import LLMChain
 from langchain.memory import ConversationSummaryMemory
 from langchain_core.output_parsers import StrOutputParser
@@ -309,4 +315,5 @@ if user_input := st.chat_input("Nhập câu hỏi của bạn về ThinkPro...")
 
 
 st.divider()
+
 
