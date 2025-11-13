@@ -1,0 +1,11 @@
+streamlit
+langchain
+langchain-openai
+langchain-community
+langchain-core
+chromadb
+duckduckgo-search
+sentence-transformers
+bs4
+pandas
+requests
